@@ -41,7 +41,7 @@ testing_instance = conn.create_node(name='all-in-one',
                                     size=flavor,
                                     ex_keyname=keypair_name,
                                     ex_userdata=userdata,
-                                    exsecurity_groups=[security_group])
+                                    ex_security_groups=[security_group])
                                     
 conn.wait_until_running([testing_instance])
 pool = conn.ex_list_floating_ip_pools()[0]
